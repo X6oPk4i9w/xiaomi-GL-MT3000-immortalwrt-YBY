@@ -80,8 +80,13 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
+      
     - name: Delete mosdns package
       run: cd openwrt && rm -rf feeds/smpackage/mosdns
+      
+    - name: Delete mosdns package
+      run: cd openwrt && rm -rf feeds/smpackage/luci-app-mosdns
+      
 
     - name: Load custom config
       run: |
